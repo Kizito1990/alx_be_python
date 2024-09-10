@@ -1,10 +1,10 @@
-#1/bin/bash
-P = 1000
-T = 0.05
-R = 3
+#!/bin/bash
+principal = 1000
+time = 0.05
+rate = 3
 
-I = P*R*T
+interest = principal * rate * time
 
-print(f"(The the simple Interest is: {I}")
+print(f"(The the simple Interest is: {nterest}")
 
 
