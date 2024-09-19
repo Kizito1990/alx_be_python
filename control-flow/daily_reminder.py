@@ -1,9 +1,8 @@
-
 #!/bin/bash
 
-# daily_reminder.py
 
-# Prompt the user for a task description, priority, and if it's time-bound
+
+
 task = input("Enter the task description: ")
 priority = input("Enter the task priority (high, medium, low): ").lower()
 time_bound = input("Is the task time-bound? (yes or no): ").lower()
