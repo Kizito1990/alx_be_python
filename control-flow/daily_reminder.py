@@ -1,32 +1,41 @@
 #!/bin/bash
 
-# daily_reminder.py
+def daily_reminder():
+    # Prompt for task description
+    task = input("Enter your task: ")
 
-# Prompt the user for a task description
-task = input("Enter a task description: ")
+    # Prompt for task priority
+    priority = input("Priority (high/medium/low): ").lower()
 
-# Prompt the user for the task's priority level
-priority = input("Enter the priority level (high, medium, low): ").lower()
+    # Prompt for whether the task is time-bound
+    time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# Prompt the user if the task is time-sensitive
-time_bound = input("Is the task time-bound? (yes or no): ").lower()
+    # Match case to react based on the priority
+    match priority:
+        case 'high':
+            reminder = f"'{task}' is a high priority task"
+        case 'medium':
+            reminder = f"'{task}' is a medium priority task"
+        case 'low':
+            reminder = f"'{task}' is a low priority task"
+        case _:
+            reminder = "Invalid priority. Please enter 'high', 'medium', or 'low'."
+            print(reminder)
+            return  # Exit if invalid priority is entered
 
-# Process the task based on priority using a match case statement
-match priority:
-    case 'high':
-        reminder = f"The task '{task}' has a HIGH priority."
-    case 'medium':
-        reminder = f"The task '{task}' has a MEDIUM priority."
-    case 'low':
-        reminder = f"The task '{task}' has a LOW priority."
-    case _:
-        reminder = f"The task '{task}' has an UNDEFINED priority."
+    # Modify reminder if the task is time-bound
+    if time_bound == 'yes':
+        reminder += " that requires immediate attention today!"
+    elif time_bound == 'no':
+        reminder += " but does not require immediate attention."
+    else:
+        print("Invalid input for time-bound. Please enter 'yes' or 'no'.")
+        return  # Exit if invalid input is entered
 
-# Modify the reminder if the task is time-sensitive
-if time_bound == 'yes':
-    reminder += " It requires immediate attention today!"
+    # Print the customized reminder
+    print(f"Reminder: {reminder}")
 
-# Print the customized reminder
-print(reminder)
+# Call the function
+daily_reminder()
 
 
