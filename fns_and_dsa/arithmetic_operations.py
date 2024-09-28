@@ -1,7 +1,7 @@
 
 #!/bin/bash
-def perform_operation(num, num2, operation):
 
+def perform_operation(num1, num2, operation):
     if operation == 'add':
         return num1 + num2
     elif operation == 'subtract':
@@ -10,9 +10,8 @@ def perform_operation(num, num2, operation):
         return num1 * num2
     elif operation == 'divide':
         if num2 == 0:
-            return "DIVISION_BY_ZERO"
+            return "Error: Division by zero"
         return num1 / num2
     else:
-        return "INVALID_OPERATION"
-
+        return "Invalid operation"
 
