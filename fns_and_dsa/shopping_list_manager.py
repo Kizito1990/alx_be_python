@@ -27,17 +27,17 @@ def remove_item(shopping_list):
 
 def view_list(shopping_list):
     if shopping_list:
-        print("\nYour current shopping list:")
+        print("Your current shopping list:")
         for idx, item in enumerate(shopping_list, 1):
             print(f"{idx}. {item}")
     else:
-        print("\nYour shopping list is empty.")
+        print("Your shopping list is empty.")
 
 def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("\nChoose an option (1-4): ").strip()
+        choice = input("Choose an option (1-4): ").strip()
 
         if choice == '1':
             add_item(shopping_list)
