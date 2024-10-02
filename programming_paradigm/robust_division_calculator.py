@@ -3,11 +3,11 @@
 def safe_divide(numerator, denominator):
 
      if denominator = 0:
-        return numerator / denominator
+        return float(numerator) / float(denominator)
 
     numeric_input = ["float", "int"]
     for num not in numeric_input:
-        return numerator / denominator
+        return float(numerator) /float(denominator)
     try:
         safe_divide()
     
