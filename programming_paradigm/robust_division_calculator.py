@@ -12,7 +12,7 @@ def safe_divide(numerator, denominator):
         safe_divide()
     
     except ZeroDivisionError:
-        print('Cannot divide by zero')
+        print("Error: Cannot divide by zero.")
 
     except ValueError:
         print('Cannot divide str value')
