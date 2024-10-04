@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/bash"
 def safe_divide(numerator, denominator):
     """Performs division with error handling for zero division and non-numeric input."""
     try:
@@ -15,5 +14,6 @@ def safe_divide(numerator, denominator):
 
     except ValueError:
         return "Error: Please enter numeric values only."
+~
 ~                                                                                                                                                    
 ~                                                                                                                            
