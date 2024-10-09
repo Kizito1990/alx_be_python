@@ -9,7 +9,8 @@ class Book:
 
 
 
-class Ebook(Book):
+class Ebook(Book)
+
     def __init__(self, file_size: int, title, author):
         super().__init__(title, author)
         self.file_size = file_size
