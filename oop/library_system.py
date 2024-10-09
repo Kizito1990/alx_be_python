@@ -8,8 +8,7 @@ class Book:
         print(f"Book: {self.title} by {self.author}")
 
 
-
-class Ebook(Book)
+class EBook(Book)
 
     def __init__(self, file_size: int, title, author):
         super().__init__(title, author)
