@@ -9,7 +9,7 @@ class Book:
 
     def __str__(self):
         """String representation of a book."""
-        return f"Book:{self.title} by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -20,7 +20,7 @@ class EBook(Book):
 
     def __str__(self):
         """String representation of an ebook."""
-        return f"Ebook:{self.title} by {self.author} (E-Book, {self.file_size}KB"
+        return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -31,7 +31,7 @@ class PrintBook(Book):
 
     def __str__(self):
         """String representation of a print book."""
-        return f"PrintBook:{self.title} by {self.author} Page Count:{self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
