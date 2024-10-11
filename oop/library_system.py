@@ -6,6 +6,7 @@ class Book:
         self.author = author
 
     def __str__(self):
+
          return f"Book: {self.title} by {self.author}"
 
 
@@ -16,7 +17,8 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 # Derived Class - PrintBook
@@ -26,7 +28,8 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-          return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 # Composition - Library
@@ -42,5 +45,5 @@ class Library:
             print("The library is currently empty.")
         else:
             for book in self.books:
-                print(book)
+                print(book
 
