@@ -11,7 +11,6 @@ class Book:
         """String representation of a book."""
         return f"Book: {self.title} by {self.author}"
 
-
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
         """Constructor to initialize the title, author, and file size of the ebook."""
@@ -21,7 +20,6 @@ class EBook(Book):
     def __str__(self):
         """String representation of an ebook."""
         return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
-
 
 class PrintBook(Book):
     def __init__(self, title: str, author: str, page_count: int):
