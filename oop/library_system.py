@@ -18,7 +18,7 @@ class EBook(Book):
 
     def __str__(self):
         """String representation of an ebook."""
-        return f"Ebook: {elf.title} by {self.author}, File Size: {self.file_size}KB"
+        return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 class PrintBook(Book):
     def __init__(self, title: str, author: str, page_count: int):
@@ -28,7 +28,7 @@ class PrintBook(Book):
 
     def __str__(self):
         """String representation of a print book."""
-        return f"PrintBook: self.title} by {self.author}, Page Count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
     def __init__(self):
