@@ -1,44 +1,53 @@
 #!/bin/bash
+# library_system.py
+
 class Book:
-    def __init__(self, title:str, author: str):
+    def __init__(self, title: str, author: str):
+        """Constructor to initialize the book's title and author."""
         self.title = title
         self.author = author
 
-    def get_info(self):
-        print(f"Book: {self.title} by {self.author}")
+    def __str__(self):
+        """String representation of a book."""
+        return f"'{self.title}' by {self.author}"
 
 
-class EBook(Book)
-
-    def __init__(self, file_size: int, title, author):
+class EBook(Book):
+    def __init__(self, title: str, author: str, file_size: int):
+        """Constructor to initialize the title, author, and file size of the ebook."""
         super().__init__(title, author)
-        self.file_size = file_size
+        self.file_size = file_size  # in megabytes
 
-    def get_info(self):
-        print(f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}")
+    def __str__(self):
+        """String representation of an ebook."""
+        return f"'{self.title}' by {self.author} (E-Book, {self.file_size}MB)"
+
 
 class PrintBook(Book):
-    def __init__(self, page_count: int, title, author):
+    def __init__(self, title: str, author: str, page_count: int):
+        """Constructor to initialize the title, author, and page count of the print book."""
         super().__init__(title, author)
         self.page_count = page_count
 
-
-    def get_info(self):
-        print(f"Ebook: {self.title} by {self.author}, Page Count: {self.page_count}")
+    def __str__(self):
+        """String representation of a print book."""
+        return f"'{self.title}' by {self.author} (Print, {self.page_count} pages)"
 
 
 class Library:
-    def __init__(self, books):
+    def __init__(self):
+        """Constructor to initialize the library with an empty list of books."""
         self.books = []
 
-
-    def add_books(self, book):
+    def add_book(self, book: Book):
+        """Adds a book (Book, EBook, or PrintBook) to the library."""
         self.books.append(book)
 
-
-    def list_book(self):
+    def list_books(self):
+        """Prints details of each book in the library."""
+        if not self.books:
+            print("The library has no books.")
+        else:
             for book in self.books:
-                print(book.get_details())
-
-
+                print(book)
 
