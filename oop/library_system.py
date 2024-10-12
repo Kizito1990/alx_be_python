@@ -1,6 +1,6 @@
 #!/bin/bash
 class Book:
-    def __init __(self,title, author):
+    def __init__(self,title, author):
         self.title = title
         self.author = author
 
