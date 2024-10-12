@@ -39,3 +39,7 @@ class Library:
         """Prints details of each book in the library."""
         if not self.books:
             print("The library has no books.")
+        else:
+            for book in self.books:
+                print(book)
+        
