@@ -15,7 +15,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"Ebook: {self.title} by {self.author},  File Size: {self.file_size}KB"
+        return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 # Derived Class - PrintBook
 class PrintBook(Book):
@@ -24,22 +24,18 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"PrintBook: {self.title} by {self.author},  Page Count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
-# Composition - Library
 class Library:
     def __init__(self):
+        """Constructor to initialize the library with an empty list of books."""
         self.books = []
 
     def add_book(self, book: Book):
+        """Adds a book (Book, EBook, or PrintBook) to the library."""
         self.books.append(book)
-        print(f"Added: {book}")
 
     def list_books(self):
+        """Prints details of each book in the library."""
         if not self.books:
-            print("The library is empty.")
-        else:
-            print("Books in the library:")
-            for book in self.books:
-                print(f"- {book}")
-
+            print("The library has no books.")
