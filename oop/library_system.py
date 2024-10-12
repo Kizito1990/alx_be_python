@@ -1,39 +1,28 @@
-
-
-
-
 #!/bin/bash
-# library_system.py
-
 class Book:
-    def __init__(self, title: str, author: str):
-        """Constructor to initialize the book's title and author."""
+    def __init __(self,title, author):
         self.title = title
         self.author = author
 
     def __str__(self):
-        """String representation of a book."""
         return f"Book: {self.title} by {self.author}"
 
-class EBook(Book):
-    def __init__(self, title: str, author: str, file_size: int):
-        """Constructor to initialize the title, author, and file size of the ebook."""
+class Ebook(Book):
+    def __init__(self, title, author, file_size):
         super().__init__(title, author)
-        self.file_size = file_size  # in megabytes
+        self.file_size = file_size
+
 
     def __str__(self):
-        """String representation of an ebook."""
         return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 class PrintBook(Book):
-    def __init__(self, title: str, author: str, page_count: int):
-        """Constructor to initialize the title, author, and page count of the print book."""
+    def __init__(self, title, author, page_count):
         super().__init__(title, author)
         self.page_count = page_count
 
     def __str__(self):
-        """String representation of a print book."""
-        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+        retyurn f"PrintBook: {self.title} by {self.author}, Page count: {self.page_count}"
 
 class Library:
     def __init__(self):
